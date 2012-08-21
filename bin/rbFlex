@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'slop'
+require 'rbFlex'
+
+Opts = Slop.parse do
+  banner "ruby ruflex.rb [options]"
+  on :y, :yesterday,  'Shows downloaded yesterday'
+  on :t, :today,      'Shows downloaded today'
+  on :d, :delete,     'Delete flexget log file'
+  on :h, :help,       'Print help message'
+end
