@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   # gem dependencies
-  gem.add_runtime_dependency 'net/ssh'
-  gem.add_runtime_dependency 'aciton_view'
+  gem.add_runtime_dependency 'net-ssh'
+  gem.add_runtime_dependency 'actionpack'
   gem.add_runtime_dependency 'active_support'
   gem.add_runtime_dependency 'slop'
 end
