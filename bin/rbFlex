@@ -1,2 +1,13 @@
 #!/usr/bin/env ruby
+
+unless File.exists?(ENV["HOME"] + "/.rbFlex.yml")
+  p "Creating base config file"
+  File.open(ENV["HOME"] + "/.rbFlex.yml", "w") { |f| f.write("
+server: '000.000.0.000'
+user: 'user_name'")}
+  p "Base config created at #{ENV["HOME"]}/.rbFlex.yml"
+  p "Edit settings and rerun."
+  abort
+end
+
 require 'rbFlex'

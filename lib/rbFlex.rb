@@ -5,6 +5,7 @@
     active_support/all
     slop
     date
+    psych
   ].each { |m| require m }
 include ActionView::Helpers::DateHelper
 
@@ -13,6 +14,9 @@ include ActionView::Helpers::DateHelper
     version
     core
   ].each { |m| require "rbFlex/#{m}" }
+
+# grab config settings for ssh
+CONF = Psych.load(File.open(ENV["HOME"] + "/.rbFlex.yml")).symbolize_keys
 
 Opts = Slop.parse do
   banner "ruby ruflex.rb [options]"
@@ -25,13 +29,13 @@ end
 options = Opts.to_hash
 puts Opts.help and exit if options[:help] == true
 
-flex = Rbflex.new('192.168.1.145', 'chris')
+flex = Rbflex.new(CONF[:server], CONF[:user])
 
 # clean out options hash
 options.each { |k, v|  options.delete(k) if v.nil? }
 
 # launch commands
-flex.printAll                                 if options.size == 0
-flex.printToday                               if options[:today] == true
-flex.printYesterday                           if options[:yesterday] == true
-flex.deleteFlexlog('192.168.1.145', 'chris')  if options[:delete] == true
+flex.printAll                                   if options.size         == 0
+flex.printToday                                 if options[:today]      == true
+flex.printYesterday                             if options[:yesterday]  == true
+flex.deleteFlexlog(CONF[:server], CONF[:user])  if options[:delete]     == true
