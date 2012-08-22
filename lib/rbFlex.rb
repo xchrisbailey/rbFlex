@@ -5,7 +5,7 @@
     active_support/all
     slop
     date
-    psych
+    yaml
   ].each { |m| require m }
 include ActionView::Helpers::DateHelper
 
@@ -16,7 +16,7 @@ include ActionView::Helpers::DateHelper
   ].each { |m| require "rbFlex/#{m}" }
 
 # grab config settings for ssh
-CONF = Psych.load(File.open(ENV["HOME"] + "/.rbFlex.yml")).symbolize_keys
+CONF = YAML::load(File.open(ENV["HOME"] + "/.rbFlex.yml")).symbolize_keys
 
 Opts = Slop.parse do
   banner "ruby ruflex.rb [options]"
