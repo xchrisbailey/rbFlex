@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["chris@subcu.lt"]
   gem.description   = %q{Parse flexget log file from remote computer}
   gem.summary       = %q{remote flexget.log parser}
-  gem.homepage      = ""
+  gem.homepage      = "http://sonkei.github.com/rbFlex"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
