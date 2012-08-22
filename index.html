@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rbFlex by sonkei</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">rbFlex</h1>
+        <p class="header">remote flexget log viewing</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/sonkei/rbFlex/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/sonkei/rbFlex/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/sonkei/rbFlex">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/sonkei">sonkei</a></p>
+
+
+      </header>
+      <section>
+        <h1>RbFlex</h1>
+
+<p>Read remote flexget.log file and displays recent downloads
+<img src="http://f.cl.ly/items/01413e3W1p1x1P1B1h3y/Screen%20Shot%202012-08-22%20at%202.23.19%20AM.png" alt="screen cap"></p>
+
+<h2>Installation</h2>
+
+<h3>Clone this repo</h3>
+
+<pre><code>git clone https://github.com/sonkei/rbFlex.git
+cd rbFlex
+</code></pre>
+
+<h3>Build and install the gem</h3>
+
+<pre><code>gem build rbFlex.gemspec
+gem install rbFlex-0.1.0.gem
+</code></pre>
+
+<h2>Usage</h2>
+
+<h3>Print all downloads</h3>
+
+<pre><code>rbFlex
+</code></pre>
+
+<h3>Print downloads today</h3>
+
+<pre><code>rbFlex -t || rbFlex --today
+</code></pre>
+
+<h3>Print yesterdays downloads</h3>
+
+<pre><code>rbFlex -y || rbFlex --yesterday
+</code></pre>
+
+<h3>Delete the flexget.log file on remote machine</h3>
+
+<pre><code>rbFlex -d || rbFlex --delete
+</code></pre>
+
+<h3>Print help</h3>
+
+<pre><code>rbFlex -h || rbFlex --help
+</code></pre>
+
+<h2>TODO</h2>
+
+<ul>
+<li>clean up</li>
+<li>print day range</li>
+</ul><h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
