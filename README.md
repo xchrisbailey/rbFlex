@@ -6,29 +6,29 @@ Read remote flexget.log file and displays recent downloads
 ## Installation
 
 ### Clone this repo
-  git clone https://github.com/sonkei/rbFlex.git
-  cd rbFlex
+    git clone https://github.com/sonkei/rbFlex.git
+    cd rbFlex
 
 ### Build and install the gem
-  gem build rbFlex.gemspec
-  gem install rbFlex-0.1.0.gem
+    gem build rbFlex.gemspec
+    gem install rbFlex-0.1.0.gem
 
 ## Usage
 
 ### Print all downloads
-  rbFlex
+    rbFlex
 
 ### Print downloads today
-  rbFlex -t || rbFlex --today
+    rbFlex -t || rbFlex --today
 
 ### Print yesterdays downloads
-  rbFlex -y || rbFlex --yesterday
+    rbFlex -y || rbFlex --yesterday
 
 ### Delete the flexget.log file on remote machine
-  rbFlex -d || rbFlex --delete
+    rbFlex -d || rbFlex --delete
 
 ### Print help 
-  rbFlex -h || rbFlex --help
+    rbFlex -h || rbFlex --help
 
 ## TODO
 - clean up
