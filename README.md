@@ -1,24 +1,38 @@
 # RbFlex
 
-TODO: Write a gem description
+Read remote flexget.log file and displays recent downloads
+![screen cap](http://f.cl.ly/items/01413e3W1p1x1P1B1h3y/Screen%20Shot%202012-08-22%20at%202.23.19%20AM.png)@25
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### Clone this repo
+  git clone https://github.com/sonkei/rbFlex.git
+  cd rbFlex
 
-    gem 'rbFlex'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rbFlex
+### Build and install the gem
+  gem build rbFlex.gemspec
+  gem install rbFlex-0.1.0.gem
 
 ## Usage
 
-TODO: Write usage instructions here
+### Print all downloads
+  rbFlex
+
+### Print downloads today
+  rbFlex -t || rbFlex --today
+
+### Print yesterdays downloads
+  rbFlex -y || rbFlex --yesterday
+
+### Delete the flexget.log file on remote machine
+  rbFlex -d || rbFlex --delete
+
+### Print help 
+  rbFlex -h || rbFlex --help
+
+## TODO
+- clean up
+- print day range
 
 ## Contributing
 
