@@ -2,12 +2,16 @@ class Rbflex
   attr_accessor :server, :user, :password
   def initialize(server, user)
     @flex = []
-    Net::SSH.start( server, user ) do |ssh|
-      ssh.exec!("cat ~/.flexget/flexget.log") do |channel, steam, data|
-        data.split("\n").map { |line| @flex << line if line.match(/Downloading/) }
+    begin
+      Net::SSH.start( server, user ) do |ssh|
+        ssh.exec!("cat ~/.flexget/flexget.log") do |channel, steam, data|
+          data.split("\n").map { |line| @flex << line if line.match(/Downloading/) }
+        end
       end
+    rescue Net::SSH::Disconnect
+      puts "SSH Connection Timed Out"
+      exit 1
     end
-    
   end
 
   def deleteFlexlog(server, user)
