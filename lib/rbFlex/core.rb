@@ -85,7 +85,7 @@ class Rbflex
   end
 
   def printShows(show_info)
-    puts "\e[35m#{show_info[1]} \e[96mS#{show_info[2]}E#{show_info[3]}".rjust(50) +
+    puts "\e[35m#{show_info[1]} \e[96mS#{show_info[2]}E#{show_info[3]}".rjust(58) +
       "\e[0m | downloaded \e[93m#{distance_of_time_in_words_to_now(show_info[0])} \e[36mago\e[0m"
   end
 end
