@@ -13,6 +13,10 @@ Read remote flexget.log file and displays recent downloads
     gem build rbFlex.gemspec
     gem install rbFlex-0.1.0.gem
 
+### Generate config file
+    run rbFlex to generate intial skeleton config
+    edit ~/.rbFlex.yml with your favorite editor
+
 ## Usage
 
 ### Print all downloads
