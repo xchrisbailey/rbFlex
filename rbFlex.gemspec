@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   # gem dependencies
-  gem.add_runtime_dependency 'net-ssh', '2.6.8'
+  gem.add_runtime_dependency 'net-ssh', '~> 2.7.0'
   gem.add_runtime_dependency 'actionpack', '4.0.0'
   gem.add_runtime_dependency 'activesupport', '4.0.0'
-  gem.add_runtime_dependency 'slop', '3.4.5'
+  gem.add_runtime_dependency 'slop', '~> 3.4.5'
 end
