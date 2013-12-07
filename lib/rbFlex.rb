@@ -8,7 +8,7 @@
     yaml
   ].each { |m| require m }
 include ActionView::Helpers::DateHelper
-
+I18n.enforce_available_locales = false
 # load the app
 %w[
     version
