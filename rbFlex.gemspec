@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.name          = "rbFlex"
   gem.version       = RbFlex::VERSION
   gem.authors       = ["chris bailey"]
-  gem.email         = ["chris@subcu.lt"]
+  gem.email         = ["chris@ghostly.io"]
   gem.description   = %q{Parse flexget log file from remote computer}
   gem.summary       = %q{remote flexget.log parser}
   gem.homepage      = "http://sonkei.github.com/rbFlex"
@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   # gem dependencies
-  gem.add_runtime_dependency 'net-ssh', '~> 2.7.0'
-  gem.add_runtime_dependency 'actionpack', '4.0.0'
-  gem.add_runtime_dependency 'activesupport', '4.0.0'
-  gem.add_runtime_dependency 'slop', '~> 3.4.5'
+  gem.add_runtime_dependency 'net-ssh', '2.7.0'
+  gem.add_runtime_dependency 'actionpack', '4.0.2'
+  gem.add_runtime_dependency 'activesupport', '4.0.2'
+  gem.add_runtime_dependency 'slop', '3.4.7'
 end
