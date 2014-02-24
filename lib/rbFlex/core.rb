@@ -4,7 +4,7 @@ class Rbflex
     @flex = []
     begin
       Net::SSH.start( server, user ) do |ssh|
-        ssh.exec!("cat ~/.flexget/flexget.log") do |channel, steam, data|
+        ssh.exec!("cat ~/.flexget/flexget.log*") do |channel, steam, data|
           data.split("\n").map { |line| @flex << line if line.match(/Downloading/) }
         end
       end
@@ -18,7 +18,7 @@ class Rbflex
     puts "Are you sure you want to delete flexget.log on #{server}? Y/n"
     if $stdin.gets.chomp.downcase == 'y'
       Net::SSH.start( server, user ) do |ssh|
-        ssh.exec!("rm ~/.flexget/flexget.log")
+        ssh.exec!("rm ~/.flexget/flexget.log*")
       end
 
       puts "\e[92mFlexget.log has been removed from #{server}\e[0m"
