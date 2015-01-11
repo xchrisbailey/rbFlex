@@ -18,12 +18,12 @@ I18n.enforce_available_locales = false
 # grab config settings for ssh
 CONF = YAML::load(File.open(ENV["HOME"] + "/.rbFlex.yml")).symbolize_keys
 
-Opts = Slop.parse do
-  banner "ruby ruflex.rb [options]"
-  on :y, :yesterday,  'Shows downloaded yesterday'
-  on :t, :today,      'Shows downloaded today'
-  on :d, :delete,     'Delete flexget log file'
-  on :h, :help,       'Print help message'
+Opts = Slop.parse do |o|
+  o.banner = "ruby ruflex.rb [options]"
+  o.on :y, :yesterday,  'Shows downloaded yesterday'
+  o.on :t, :today,      'Shows downloaded today'
+  o.on :d, :delete,     'Delete flexget log file'
+  o.on :h, :help,       'Print help message'
 end
 
 options = Opts.to_hash
